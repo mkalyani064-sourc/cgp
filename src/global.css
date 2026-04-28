@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #ff6d00;
+  --accent-color: #00c853;
+  --dark-color: #202124;
+  --light-color: #f8f9fa;
+  --white-color: #ffffff;
+  --text-color: #5f6368;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Import this CSS in your App.js or index.js */

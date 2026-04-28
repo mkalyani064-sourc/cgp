@@ -1,0 +1,222 @@
+/* Resources.css - Simple structure like Career Streams */
+
+/* Header */
+.resources-header {
+  background: linear-gradient(135deg, #1a73e8, #00c853);
+  padding: 100px 0 80px;
+  text-align: center;
+  color: white;
+}
+
+.resources-header h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.resources-header p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+/* Filter Bar */
+.filter-bar {
+  background: white;
+  padding: 20px 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 40px;
+  background: white;
+  color: #5f6368;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-btn i {
+  font-size: 14px;
+}
+
+.filter-btn:hover {
+  border-color: #1a73e8;
+  color: #1a73e8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(26,115,232,0.2);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #1a73e8, #00c853);
+  color: white;
+  border-color: transparent;
+}
+
+/* Resources Grid - Simple cards like Career Streams */
+.resources-section {
+  padding: 60px 0;
+  background: #f8f9fa;
+  min-height: 60vh;
+}
+
+.resources-grid-simple {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* Simple Resource Card */
+.resource-card-simple {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card-simple:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(26,115,232,0.15);
+}
+
+.resource-image-simple {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.resource-image-simple img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.resource-card-simple:hover .resource-image-simple img {
+  transform: scale(1.05);
+}
+
+.category-tag-simple {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.category-tag-simple.article { background: #1a73e8; }
+.category-tag-simple.guide { background: #00c853; }
+.category-tag-simple.video { background: #ff6d00; }
+.category-tag-simple.tool { background: #9c27b0; }
+
+.resource-content-simple {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.resource-content-simple h3 {
+  font-size: 20px;
+  color: #202124;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.resource-content-simple p {
+  color: #5f6368;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Learn More Button - Simple like Career Streams */
+.learn-more-btn {
+  background: linear-gradient(135deg, #1a73e8, #00c853);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.learn-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(26,115,232,0.3);
+}
+
+.learn-more-btn i {
+  transition: transform 0.3s ease;
+}
+
+.learn-more-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resources-header h1 {
+    font-size: 32px;
+  }
+  
+  .resources-header p {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+  
+  .resources-grid-simple {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-wrapper {
+    flex-direction: column;
+  }
+  
+  .filter-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

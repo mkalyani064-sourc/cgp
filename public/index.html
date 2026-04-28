@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1a73e8" /> <!-- Your primary blue color -->
+  <meta name="description" content="Career Guide - Discover Your Perfect Career Path with Scientific Assessments and Expert Counselling" />
+  <link rel="apple-touch-icon" href="/logo192.png" />
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Google Fonts - Poppins (Your theme font) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 (Your icon library) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Your Theme Colors as CSS Variables -->
+  <style>
+    :root {
+      --primary-color: #1a73e8;
+      --primary-dark: #1557b0;
+      --primary-light: #e8f0fe;
+      --accent-color: #00c853;
+      --accent-dark: #00a844;
+      --accent-light: #e8f5e9;
+      --dark-color: #202124;
+      --light-color: #f8f9fa;
+      --text-color: #5f6368;
+      --white: #ffffff;
+      --shadow: 0 10px 30px rgba(26, 115, 232, 0.15);
+      --shadow-hover: 0 20px 40px rgba(26, 115, 232, 0.25);
+      --gradient-primary: linear-gradient(135deg, #1a73e8, #00c853);
+      --gradient-light: linear-gradient(135deg, #e8f0fe, #e8f5e9);
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: var(--text-color);
+      background: var(--gradient-light);
+    }
+
+    code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--light-color);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gradient-primary);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Selection Style */
+    ::selection {
+      background: var(--primary-color);
+      color: white;
+    }
+  </style>
+  
+  <title>Career Guide - Discover Your Perfect Career Path</title>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  
+  <!-- AOS Animation Script (loaded here for better performance) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS with your theme
+    if (window.AOS) {
+      window.AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+        easing: 'ease-in-out',
+        delay: 0
+      });
+    }
+  </script>
+</body>
+</html>
