@@ -1,53 +1,174 @@
-# Getting Started with Create React App
+# Career Guidance Platform (CGP)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for career guidance and assessments. This platform helps students discover their strengths through aptitude tests, personality assessments, and career exploration.
+
+## Features
+
+- 🎯 **Aptitude Testing** - Test your skills and abilities
+- 🧠 **Personality Assessment** - Discover your personality type
+- 💼 **Career Exploration** - Browse 20+ career paths
+- 👨‍💼 **Counsellor Booking** - Book sessions with career counsellors
+- 📚 **Resources** - Access curated career resources
+- 💝 **Donations** - Support the platform
+- 🔐 **User Authentication** - Secure login and registration
+
+## Tech Stack
+
+- **Frontend:** React 18, React Router, CSS
+- **Backend:** Express.js, Node.js
+- **Database:** MongoDB Atlas
+- **Email:** Nodemailer
+- **Authentication:** JWT
+
+## Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- MongoDB Atlas account (for database)
+- Gmail account (for email functionality)
+
+## Installation
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/mkalyani064-sourc/cgp.git
+cd cgp
+```
+
+### 2. Install frontend dependencies
+```bash
+npm install
+```
+
+### 3. Install backend dependencies
+```bash
+cd backend
+npm install
+cd ..
+```
+
+### 4. Set up environment variables
+
+Create `.env` file in the `backend` folder:
+```bash
+cp backend/.env.example backend/.env
+```
+
+Edit `backend/.env` and add your credentials:
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+JWT_EXPIRE=30d
+EMAIL_USER=your_gmail@gmail.com
+EMAIL_PASS=your_app_password
+FRONTEND_URL=http://localhost:3000
+```
+
+## Running the Project
+
+### Option 1: Run both servers simultaneously
+
+#### Terminal 1 - Start Backend:
+```bash
+npm run server
+```
+Backend runs on: **http://localhost:5000**
+
+#### Terminal 2 - Start Frontend:
+```bash
+npm start
+```
+Frontend runs on: **http://localhost:3000**
+
+### Option 2: Run individually
+
+**Backend only:**
+```bash
+cd backend
+npm start
+```
+
+**Frontend only:**
+```bash
+npm start
+```
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Frontend
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run tests
 
-### `npm start`
+### Backend
+- `npm run server` - Start with nodemon (auto-reload)
+- `npm start` - Start production server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## API Endpoints
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - Login user
+- `GET /api/careers` - Get all careers
+- `GET /api/assessment` - Get assessments
+- `POST /api/bookings` - Book counsellor session
+- `GET /api/counsellors` - Get counsellors
+- `GET /api/resources` - Get resources
+- `POST /api/donations` - Make donation
+- `POST /api/contact` - Send contact message
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+cgp/
+├── backend/
+│   ├── config/         # Database & auth config
+│   ├── controllers/    # Route controllers
+│   ├── models/         # MongoDB models
+│   ├── routes/         # API routes
+│   ├── middleware/     # Custom middleware
+│   ├── utils/          # Utility functions
+│   ├── server.js       # Express app
+│   └── package.json
+├── src/
+│   ├── pages/          # React pages
+│   ├── components/     # React components
+│   ├── App.jsx         # Main app component
+│   └── index.js
+├── public/             # Static files
+└── package.json
+```
 
-### `npm run build`
+## Environment Variables
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+See `backend/.env.example` for required environment variables.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend (Vercel)
+1. Push to GitHub
+2. Go to vercel.com
+3. Import this repository
+4. Deploy with one click
 
-### `npm run eject`
+### Backend (Railway)
+1. Go to railway.app
+2. Connect GitHub account
+3. Select `cgp` repo and `backend` folder
+4. Add environment variables
+5. Deploy
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feel free to fork and submit pull requests.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ISC
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+mkalyani064-sourc
 
 ### Analyzing the Bundle Size
 
